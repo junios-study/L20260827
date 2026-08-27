@@ -1,9 +1,9 @@
 #include "Goblin.h"
 
-Goblin::Goblin()
+AGoblin::AGoblin()
 {
 }
 
-Goblin::~Goblin()
+AGoblin::~AGoblin()
 {
 }

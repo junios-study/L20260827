@@ -1,11 +1,11 @@
 #pragma once
 #include "Actor.h"
-class Goblin : public AActor
+class AGoblin : public AActor
 {
 public:
-	Goblin();
+	AGoblin();
 
-	~Goblin();
+	~AGoblin();
 
 };
 
