@@ -9,5 +9,8 @@ public:
 	virtual ~APlayer();
 
 	virtual void Move() override;
+
+	int A();
+	int A(int A);
 };
 

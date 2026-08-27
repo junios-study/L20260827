@@ -126,6 +126,7 @@
     <ClCompile Include="Actor.cpp" />
     <ClCompile Include="Goblin.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Slime.cpp" />
     <ClCompile Include="WildPig.cpp" />
@@ -133,12 +134,14 @@
   <ItemGroup>
     <ClInclude Include="Actor.h" />
     <ClInclude Include="Goblin.h" />
+    <ClInclude Include="Monster.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Slime.h" />
     <ClInclude Include="WildPig.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
