@@ -7,8 +7,15 @@ class AActor
 {
 public:
 	AActor();
+
 	virtual ~AActor();
 
 	virtual void Move();
+
+	int A;
+	int B;
+	int* P;
+
+	char Name[1024];
 };
 

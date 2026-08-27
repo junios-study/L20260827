@@ -56,10 +56,6 @@ int main()
 	Add<float>(1.0f, 2.0f);
 	Add<int, int>(1, 2.0f);
 
-	map<string, AActor*> ActorMaps;
-
-	ActorMaps["진영"] = new AGoblin();
-	ActorMaps["진영"] = new ASlime();
 
 	srand((unsigned int)time(0));
 
