@@ -5,7 +5,9 @@ class AGoblin : public AActor
 public:
 	AGoblin();
 
-	~AGoblin();
+	virtual ~AGoblin();
+
+	virtual void Move() override;
 
 };
 

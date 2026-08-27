@@ -4,41 +4,52 @@
 #include "Goblin.h"
 #include "WildPig.h"
 
+//STL, C++
+//동적 배열
+#include <vector>
+
 using namespace std;
 
 int main()
 {
-	int CountOfSlime = 3;
-	int CountOfGoblin = 2;
-	int CountOfWildPig = 1;
-	//파일로 고블린, 멧돼지, 슬라임 숫자를 가져온다.
-	//맵 파일
+	srand(time(0));
 
-	APlayer* Player = new APlayer(); 
+	int TotalMonster = 0;
+	cin >> TotalMonster;
 
-	ASlime* Slimes = new ASlime[CountOfSlime];
-	AGoblin* Goblins = new AGoblin[CountOfGoblin];
-	AWildPig* WildPigs = new AWildPig[CountOfWildPig];
+	vector<AActor*> Actors;
 
-	//반복
-	Player->Move();
-	for (int i = 0; i < CountOfSlime; ++i)
+	Actors.push_back(new APlayer);
+
+	for (int i = 0; i < TotalMonster; ++i)
 	{
-		Slimes[i].Move();
-	}
-	for (int i = 0; i < CountOfGoblin; ++i)
-	{
-		Goblins[i].Move();
-	}
-	for (int i = 0; i < CountOfWildPig; ++i)
-	{
-		WildPigs[i].Move();
+		int Type = rand() % 1000;
+		if (Type >= 0 && Type < 600)
+		{
+			Actors.push_back(new ASlime);
+		}
+		else if (Type >= 600 && Type < 900)
+		{
+			Actors.push_back(new AGoblin);
+		}
+		else
+		{
+			Actors.push_back(new AWildPig);
+		}
 	}
 
-	delete Player;
-	delete[] Slimes;
-	delete[] Goblins;
-	delete[] WildPigs;
+	for (int i = 0; i < TotalMonster; ++i)
+	{
+		Actors[i]->Move();
+	}
+
+
+	for (int i = 0; i < TotalMonster; ++i)
+	{
+		delete Actors[i];
+	}
+
+	Actors.clear();
 
 	return 0;
 }

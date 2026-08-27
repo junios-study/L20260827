@@ -18,7 +18,3 @@ void AActor::Move()
 {
 	cout << "AActor ÀÌµ¿" << endl;
 }
-
-void AActor::Attack()
-{
-}
